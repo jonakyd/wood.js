@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Future JS</title>
+	<link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+	<div class="ctrl">
+		<a href="http://<%= ip %>:<%= port %>/" target="_ry">New Window</a>
+	</div>
+	<br />
+	<div class="ip4">
+		<div class="statusBar">
+<!-- 			<div class="block-l signal">
+				<div class="s">
+					<div class="s1"></div>
+				</div>
+				<div class="s">
+					<div class="s2"></div>
+				</div>
+				<div class="s">
+					<div class="s3"></div>
+				</div>
+				<div class="s">
+					<div class="s4"></div>
+				</div>
+				<div class="s">
+					<div class="s5"></div>
+				</div>
+			</div>
+ -->			<div class="block-l">4G</div>
+			<div class="block-l time">9:41 AM</div>
+			<div class="battery">
+				<div class="bbody">
+					<div class="energy"></div>
+				</div>
+				<div class="dend"></div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<iframe id="ifr" src="http://<%= ip %>:<%= port %>/" border="0" frameborder="0" scrolling="no" style="" marginwidth="0" marginheight="0"></iframe>
+		</div>
+		<div id="reloadBtn" ></div>
+	</div>
+	<script src="/libs/jquery-1.7.2.js" type="text/javascript" ></script>
+	
+	<textarea id="source" style="display:none">
+var sc= document.createElement("script"); 
+sc.type = "text/javascript"; 
+sc.async = true;
+sc.src = "http://<%= ip %>:3210/target/target-script-min.js#futurejs";
+var s = document.body; s.parentNode.insertBefore(sc, s);
+window.open("http://<%= ip %>:3210/client/#futurejs");
+	</textarea>
+	<script>
+		$(function(){
+			function easyCompress(str){
+			     return str.replace(/[\r\n]/gi,"").replace(/\/\*.*?\*\//gi,"");
+			}
+			$("#reloadBtn").click(function(){
+                $('#ifr')[0].contentWindow.location.reload(true);
+                return false;
+			});
+			$("| Bookmarklet : <a href='javascript:void((function(){"+easyCompress( $("#source").val())+"})());'>Weinre</a>").appendTo(".ctrl");
+
+		});
+	</script>
+	<% if (liveReload) { %>
+	<script type="text/javascript" async="true" src="http://<%= ip %>:35729/livereload.js?snipver=1"></script>
+	<% } %>
+</body>
+</html>

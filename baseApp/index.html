@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>future-js</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!-- Apple touch device tag -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- Prevent iOS auto parse number as tel within text -->
+        <meta name="format-detection" content="telephone=no" />
+        <!-- Mobile tag specific the width and height for the mobile browser -->
+        <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, user-scalable=no" />
+        <!-- root stylesheet -->
+        <link rel="stylesheet" type="text/css" href="core/views/styles/main.css"/>
+        <link rel="stylesheet" type="text/css" href="app/views/styles/main.css"/>
+        <!-- debug -->
+        <script type="text/javascript">
+          window.isCordova = false;
+          window.buildPlatform = 'android'; // android, ios 
+        </script>
+        <!-- *************** platform specific start *************** -->
+        <!-- mobile reset -->
+        <script type="text/javascript" charset="UTF-8" src="libs/android_mobile_reset.js"></script>
+        <link rel="stylesheet" type="text/css" href="core/views/styles/libs/android.css"/>
+        <!-- cordova -->
+        <script type="text/javascript" charset="UTF-8" src="libs/cordova/2.0.0-android.js"></script>
+        <!-- *************** platform specific end   *************** -->
+        <!-- entry point -->
+        <script type="text/javascript" src="core/entry.js"></script>
+    </head>
+    <body>
+        <!-- splash page -->
+        <div id="splash" selected="true"></div>
+        <!-- hidden input to fix android -->
+        <input type="text" class="hidden-input" />
+    </body>
+</html>

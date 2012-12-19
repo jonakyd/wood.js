@@ -1,0 +1,16 @@
+<div class="back-wrapper link" data-back="true">
+  <div class="button back-button">
+      <img src="{{backButton}}"/>
+  </div>
+</div>
+<div class="title">{{title}}</div>
+{{#background}}
+<div class="background-image">
+  <img src="{{background}}">
+</div>
+{{/background}}
+{{#buttons}}
+<div class="button buttons link" data-href="{{href}}" {{#back}}data-back="true"{{/back}}>
+    <img src="{{img}}" class="{{class}}"/>
+</div>
+{{/buttons}}

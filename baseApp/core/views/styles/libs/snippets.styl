@@ -1,0 +1,33 @@
+/** global variable **/
+vendors = webkit moz o ms official
+
+/** geometry　**/
+square(length)
+  width: length
+  height: length
+circle(radius)
+  square(radius)
+  -moz-border-radius: radius/2
+  -webkit-border-radius: radius/2
+  border-radius: radius/2
+
+/** misc **/
+text-shadow(@pos_color = #fff)
+  text-shadow: 0 1px 0 @pos_color
+
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+border-radius()
+  for vendor in vendors
+    if vendor == official
+      border-radius: arguments
+    else
+      -{vendor}-border-radius: arguments
+box-sizing(value = border-box)
+  for vendor in vendors
+    if vendor == official
+      box-sizing: value
+    else
+      -{vendor}-box-sizing: value 

@@ -1,0 +1,59 @@
+.carousel {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.carousel .pointer-wrapper {
+  position: absolute;
+  bottom: 0.7em;
+  width: 100%;
+  text-align: center;
+}
+.carousel .pointer-wrapper .pointer {
+  margin: 0 0.3em;
+  display: inline-block;
+}
+.carousel .pointer-wrapper .pointer .pointer-inner {
+  -webkit-transition: background-color 0.8s ease;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.3em;
+  background-color: #b8b8b8;
+}
+.carousel .pointer-wrapper .pointer.selected .pointer-inner {
+  background-color: #fff;
+}
+.carousel .carousel-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.carousel .carousel-wrapper .item {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  -webkit-transform: translateZ(0px);
+  width: 100%;
+  height: 100%;
+}
+.carousel .carousel-wrapper .item .title {
+  position: relative;
+  top: -2em;
+  font-weight: bold;
+  background-color: #222;
+  color: White;
+  line-height: 2em;
+  font-size: 1.2em;
+}
+.carousel .carousel-wrapper .item .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.carousel .carousel-wrapper .item .carouselTitle {
+  position: relative;
+  width: 100%;
+  background-color: rgba(0,0,0,0.50);
+  font-size: 1.2em;
+  text-align: center;
+}

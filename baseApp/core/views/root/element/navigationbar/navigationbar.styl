@@ -1,0 +1,66 @@
+.navigationbar
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  &.light
+    background-color: rgb(241, 242, 242) 
+    .background-image
+      display: none
+    .title
+      color: rgb(128, 130, 133) 
+
+  .background-image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    img
+      width: 100%
+      height: 30px
+
+  .title
+    margin: 0 auto
+    width: 50%
+    text-align: center
+    line-height: 44px
+    font-size: 1.2em
+    color: white
+    font-weight: bold
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    // text-shadow: 20px -12px 2px #6374AB
+    // text-shadow: 0 1px 5px #d9d9d9 
+
+  .back-wrapper
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 20%
+    .back-button
+      position: absolute 
+      top: 7px
+      left: 7px
+      width: 30px
+      height: 30px
+      background-color: white
+      border-radius: 25px
+      z-index: 100
+      &.press
+        box-shadow: 0 0 20px 5px white
+      img
+        position: absolute
+        top: 5px
+        left: 5px
+        height: 20px
+  .buttons
+    position: absolute
+    right: 0
+    top: 0
+    width: 17%
+    img
+      height: 60%
+      margin-top: 20%

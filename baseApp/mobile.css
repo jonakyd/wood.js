@@ -1,0 +1,159 @@
+.ip4 {
+  position: relative;
+  background: url("http://dl.dropbox.com/u/15540367/iphone.png") no-repeat 0 0 #fff;
+  width: 400px;
+  height: 750px;
+}
+#reloadBtn {
+  position: absolute;
+  cursor: pointer;
+  bottom: 36px;
+  left: 172px;
+  width: 70px;
+  height: 70px;
+}
+.statusBar {
+  position: absolute;
+  font-family: helvetica;
+  font-size: 10px;
+  color: #fff;
+  top: 135px;
+  left: 40px;
+  width: 320px;
+  height: 16px;
+  padding: 2px 0;
+  text-shadow: 0 1px 0 #4a6063;
+}
+.statusBar .time {
+  margin-left: 95px;
+}
+.statusBar .block-l {
+  float: left;
+  text-indent: 3px;
+}
+.statusBar .signal {
+  background: #fff;
+  width: 20px;
+  height: 14px;
+}
+.statusBar .signal .s {
+  float: left;
+  border-right: 1px solid #1d2627;
+  width: 3px;
+  height: 14px;
+}
+.statusBar .signal .s5 {
+  -webkit-animation: signalFlip5 2s infinite;
+  height: 3px;
+  background-color: #1d2627;
+}
+.statusBar .signal .s4 {
+  -webkit-animation: signalFlip4 2s infinite;
+  height: 6px;
+  background-color: #1d2627;
+}
+.statusBar .signal .s3 {
+  -webkit-animation: signalFlip3 2s infinite;
+  height: 8px;
+  background-color: #1d2627;
+}
+.statusBar .signal .s2 {
+  -webkit-animation: signalFlip2 2s infinite;
+  height: 10px;
+  background-color: #1d2627;
+}
+.statusBar .signal .s1 {
+  -webkit-animation: signalFlip1 2s infinite;
+  height: 12px;
+  background-color: #1d2627;
+}
+.statusBar .battery {
+  float: right;
+  width: 20px;
+  padding-top: 2px;
+}
+.statusBar .battery .bbody {
+  float: left;
+  border: 1px solid #fff;
+  width: 14px;
+  height: 7px;
+  padding: 1px;
+  border-radius: 2px;
+  background-color: #1d2627;
+}
+.statusBar .battery .bbody .energy {
+  border-radius: 1px;
+  background-color: #fff;
+  width: 85%;
+  height: 100%;
+}
+.statusBar .battery .dend {
+  margin-top: 3px;
+  margin-left: -1px;
+  float: right;
+  border: 1px solid #fff;
+  border-width: 1px 1px 1px 0;
+  width: 1px;
+  height: 3px;
+}
+@-webkit-keyframes signalFlip5 {
+  0%, 100% {
+    height: 14px;
+    -webkit-transition: all 0.5s ease-in;
+  }
+
+  50% {
+    height: 3px;
+  }
+}
+@-webkit-keyframes signalFlip4 {
+  0%, 100% {
+    height: 14px;
+    -webkit-transition: all 0.5s ease-in;
+  }
+
+  50% {
+    height: 6px;
+  }
+}
+@-webkit-keyframes signalFlip3 {
+  0%, 100% {
+    height: 14px;
+    -webkit-transition: all 0.5s ease-in;
+  }
+
+  50% {
+    height: 8px;
+  }
+}
+@-webkit-keyframes signalFlip2 {
+  0%, 100% {
+    height: 14px;
+    -webkit-transition: all 0.5s ease-in;
+  }
+
+  50% {
+    height: 10px;
+  }
+}
+@-webkit-keyframes signalFlip1 {
+  0%, 100% {
+    height: 14px;
+    -webkit-transition: all 0.5s ease-in;
+  }
+
+  50% {
+    height: 12px;
+  }
+}
+.wrapper {
+  cursor: pointer;
+  position: absolute;
+  left: 40px;
+  top: 155px;
+}
+iframe {
+  cursor: pointer;
+  width: 320px;
+  height: 460px;
+}

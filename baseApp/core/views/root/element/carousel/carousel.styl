@@ -1,0 +1,55 @@
+.carousel
+  // wtf start
+  position: relative
+  display: block
+  // wtf end
+  overflow: hidden
+  .pointer-wrapper
+    position: absolute
+    bottom: 0.7em
+    width: 100%
+    text-align: center
+    .pointer
+      margin: 0 0.3em
+      display: inline-block
+      .pointer-inner
+        -webkit-transition: background-color 0.8s ease;
+        box-shadow(inset 1px 1px 1px -1px #565656)
+        width: 0.5em
+        height: 0.5em
+        border-radius: 0.3em
+        background-color: #B8B8B8
+    .pointer.selected
+      .pointer-inner
+        box-shadow(inset 1px 1px 2px 0px #898989)
+        background-color: #FFFFFF
+
+  .carousel-wrapper
+    position: absolute
+    width: 100%
+    height: 100%
+    .item
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+      position: absolute
+      -webkit-transform: translateZ(0px)
+      width: 100%
+      height: 100%
+      .title
+        position: relative
+        top: -2em
+        font-weight: bold
+        background-color: #222
+        color: White
+        line-height: 2em
+        font-size: 1.2em
+      .img
+        position: absolute
+        width: 100%
+        height: 100%
+      .carouselTitle
+        position: relative
+        width: 100%
+        background-color: rgba(0,0,0,0.5)
+        font-size: 1.2em
+        text-align: center
